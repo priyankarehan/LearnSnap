@@ -1,0 +1,537 @@
+/* General Body Style */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0e0e0; /* Grey background for the entire page */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Container */
+.nav-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: inline-flex; /* Align items in a single row */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #ffcc29;
+    color: #333;
+    border-radius: 5px;
+}
+
+/* Section Styling for Education Page */
+.education-section {
+    background-color: white; /* White background for the section */
+    padding: 40px; /* Double padding */
+    margin: 80px 20px; /* Space below the fixed nav */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Image Styling */
+.education-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Set a maximum width */
+    display: block; /* Make the image a block element */
+    margin: 0 auto 20px; /* Center the image and add some space below */
+}
+
+/* Hamburger Menu (for smaller screens) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #333;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .nav-links.show {
+        left: 0;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Hero Section Styling */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.cta-btn {
+    background-color: #ffcc29;
+    color: #333;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #333;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background: linear-gradient(120deg, #f5f7fa, #c3cfe2);
+}
+
+/* Contact Form Styling */
+.contact-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+/* Submit Button Styling */
+.contact-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 10px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+/* Home Section */
+.home-content {
+    text-align: center;
+    padding: 60px;
+}
+
+.home-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+
+/* Section Styling for Hobbies Page */
+.hobbies-section {
+    background-color: white; /* White background for the section */
+    padding: 40px; /* Double padding */
+    margin: 80px 20px; /* Space below the fixed nav */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Image Styling for Hobbies */
+.hobbies-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Set a maximum width */
+    display: block; /* Make the image a block element */
+    margin: 0 auto 20px; /* Center the image and add some space below */
+}
+
+/* Section Styling for Experience Page */
+.experience-section {
+    background-color: white; /* White background for the section */
+    padding: 40px; /* Double padding */
+    margin: 80px 20px; /* Space below the fixed nav */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Image Styling for Experience */
+.experience-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Set a maximum width */
+    display: block; /* Make the image a block element */
+    margin: 0 auto 20px; /* Center the image and add some space below */
+}
+
+
+/* Section Styling for Journal Page */
+.journal-section {
+    background-color: white; /* White background for the section */
+    padding: 40px; /* Double padding */
+    margin: 80px 20px; /* Space below the fixed nav */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Image Styling for Journal */
+.journal-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Set a maximum width */
+    display: block; /* Make the image a block element */
+    margin: 0 auto 20px; /* Center the image and add some space below */
+}
+
+/* Section Styling for Blog Page */
+.blog-section {
+    background-color: white; /* White background for the section */
+    padding: 40px; /* Double padding */
+    margin: 80px 20px; /* Space below the fixed nav */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Image Styling for Blog */
+.blog-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Set a maximum width */
+    display: block; /* Make the image a block element */
+    margin: 0 auto 20px; /* Center the image and add some space below */
+}
+
+/* Article Styling */
+.blog-section article {
+    margin-bottom: 30px; /* Space between articles */
+}
+
+.blog-section h3 {
+    margin-top: 20px; /* Space above article titles */
+}
+
+.blog-section a {
+    text-decoration: none; /* Remove underline from links */
+    color: #007BFF; /* Link color */
+}
+
+.blog-section a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Section Styling for Portfolio Page */
+.portfolio-section {
+    background-color: white; /* White background for the section */
+    padding: 40px; /* Double padding */
+    margin: 80px 20px; /* Space below the fixed nav */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Image Styling for Portfolio */
+.portfolio-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Set a maximum width */
+    display: block; /* Make the image a block element */
+    margin: 0 auto 20px; /* Center the image and add some space below */
+}
+
+/* CV Section Styling */
+.cv-section {
+    margin-bottom: 30px; /* Space between CV sections */
+}
+
+.cv-section h3 {
+    margin-top: 20px; /* Space above section titles */
+}
+
+/* Section Styling for Testimonials Page */
+.testimonials-section {
+    background-color: white; /* White background for the section */
+    padding: 40px; /* Double padding */
+    margin: 80px 20px; /* Space below the fixed nav */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Image Styling for Testimonials */
+.testimonial-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Set a maximum width */
+    display: block; /* Make the image a block element */
+    margin: 0 auto 20px; /* Center the image and add some space below */
+}
+
+/* Testimonial Styling */
+.testimonial {
+    border-left: 4px solid #3498db; /* Blue left border */
+    padding: 10px 15px; /* Padding for testimonial text */
+    margin-bottom: 20px; /* Space between testimonials */
+    background-color: #f9f9f9; /* Light gray background for each testimonial */
+    border-radius: 5px; /* Rounded corners for testimonials */
+}
+
+/* Testimonial Paragraph Styling */
+.testimonial p {
+    margin: 0; /* Remove default margins */
+    line-height: 1.6; /* Line height for readability */
+}
+/* Section Styling for Career Page */
+.career-section {
+    background-color: white; /* White background for the section */
+    padding: 40px; /* Generous padding */
+    margin: 80px 20px; /* Space below the fixed nav */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Image Styling for Career Overview */
+.career-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Set a maximum width */
+    display: block; /* Make the image a block element */
+    margin: 0 auto 20px; /* Center the image and add some space below */
+}
+
+/* Additional paragraph styling */
+.career-section p {
+    line-height: 1.6; /* Line height for readability */
+    margin: 0; /* Remove default margins */
+}
+/* Section Styling for Travel Page */
+.travel-section {
+    background-color: white; /* White background for the section */
+    padding: 40px; /* Generous padding */
+    margin: 80px 20px; /* Space below the fixed nav */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Image Styling for Travel Experiences */
+.travel-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Set a maximum width */
+    display: block; /* Make the image a block element */
+    margin: 0 auto 20px; /* Center the image and add some space below */
+}
+
+/* Additional paragraph styling */
+.travel-section p {
+    line-height: 1.6; /* Line height for readability */
+    margin: 0; /* Remove default margins */
+}
+/* Section Styling for Projects Page */
+.projects-section {
+    background-color: white; /* White background for the section */
+    padding: 40px; /* Generous padding */
+    margin: 80px 20px; /* Space below the fixed nav */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Image Styling for Projects */
+.projects-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Set a maximum width */
+    display: block; /* Make the image a block element */
+    margin: 0 auto 20px; /* Center the image and add some space below */
+}
+
+/* Additional paragraph styling */
+.projects-section p {
+    line-height: 1.6; /* Line height for readability */
+    margin: 0; /* Remove default margins */
+}
+/* Section Styling for Goals Page */
+.goals-section {
+    background-color: white; /* White background for the section */
+    padding: 40px; /* Generous padding */
+    margin: 80px 20px; /* Space below the fixed nav */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Image Styling for Goals */
+.goals-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Set a maximum width */
+    display: block; /* Make the image a block element */
+    margin: 0 auto 20px; /* Center the image and add some space below */
+}
+
+/* Additional paragraph styling */
+.goals-section p {
+    line-height: 1.6; /* Line height for readability */
+    margin: 0; /* Remove default margins */
+}
+/* Section Styling for Skills Page */
+.skills-section {
+    background-color: white; /* White background for the section */
+    padding: 40px; /* Generous padding */
+    margin: 80px 20px; /* Space below the fixed nav */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Image Styling for Skills */
+.skills-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Set a maximum width */
+    display: block; /* Make the image a block element */
+    margin: 0 auto 20px; /* Center the image and add some space below */
+}
+
+/* Additional paragraph styling */
+.skills-section p {
+    line-height: 1.6; /* Line height for readability */
+    margin: 0; /* Remove default margins */
+}
+/* Section Styling for Achievements Page */
+.achievements-section {
+    background-color: white; /* White background for the section */
+    padding: 40px; /* Generous padding */
+    margin: 80px 20px; /* Space below the fixed nav */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Image Styling for Achievements */
+.achievements-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Set a maximum width */
+    display: block; /* Make the image a block element */
+    margin: 0 auto 20px; /* Center the image and add some space below */
+}
+
+/* Additional paragraph styling */
+.achievements-section p {
+    line-height: 1.6; /* Line height for readability */
+    margin: 0; /* Remove default margins */
+}
+
+/* List styling for achievements */
+.achievements-section ul {
+    list-style-type: disc; /* Bullet points for the list */
+    padding-left: 20px; /* Indent the list */
+}
