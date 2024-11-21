@@ -1,0 +1,125 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#splashScreen {
+    background-color: #007BFF; /* Splash screen background color */
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.phone-frame {
+    width: 375px; /* Width of the phone frame */
+    max-width: 100%; /* Make it responsive */
+    height: auto; /* Adjust height to fit content */
+    border: 16px solid #333; /* Phone frame border */
+    border-radius: 36px; /* Rounded corners */
+    padding: 20px;
+    margin: 20px auto; /* Center the phone frame */
+    background-color: #fff; /* Background color of the phone frame */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Reduced shadow for a softer effect */
+}
+
+#homeOptions {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center the buttons */
+    gap: 20px; /* Space between buttons */
+}
+
+button {
+    width: 80%; /* Make the buttons wider */
+    padding: 15px; /* Padding for thicker buttons */
+    border: none;
+    border-radius: 10px;
+    background-color: #0ac495; /* Button background color */
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Softer shadow effect */
+    font-size: 1.2rem; /* Larger font size */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth color and scale transition */
+}
+
+button:hover {
+    background-color: #a4e902; /* Button hover background color */
+    transform: translateY(-2px); /* Slight hover lift effect */
+}
+
+#topicsList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.topicItem {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items horizontally */
+    margin: 10px 0;
+}
+
+.topicImage {
+    width: 50px; /* Adjust image size */
+    height: 50px; /* Adjust image size */
+    margin-right: 10px; /* Space between image and button */
+}
+
+.topicButton {
+    background-color: #ffa600; /* Topic button background color */
+    color: white; /* Topic button text color */
+    padding: 10px 20px; /* Padding for topic button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for topic button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for topic button background color */
+}
+
+.topicButton:hover {
+    background-color: #f14400; /* Darker blue on hover for topic button */
+}
+
+#lessonContainer, #puzzleContainer {
+    margin: 20px;
+}
+
+h2, h3 {
+    color: #007BFF; /* Header color */
+    font-family: 'Arial', sans-serif;
+}
+
+@media (max-width: 600px) {
+    .phone-frame {
+        width: 100%; /* Make it full-width on small screens */
+        border: 12px solid #333; /* Reduce border thickness on small screens */
+        border-radius: 20px; /* Adjust corner radius for smaller screens */
+    }
+
+    button {
+        width: 90%; /* Make buttons more flexible on small screens */
+        font-size: 1rem; /* Reduce button text size slightly */
+    }
+
+    h2, h3 {
+        font-size: 1.5rem; /* Adjust heading sizes for smaller screens */
+    }
+}
+
+
+#dailySnapImage {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+    margin: 20px 0; /* Add some space around the image */
+}

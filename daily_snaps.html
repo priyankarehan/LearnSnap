@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Daily Snaps</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        /* Style for the daily snap image */
+        #dailySnapImage {
+            max-width: 100%; /* Ensure the image is responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Add rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+            margin: 20px 0; /* Add some space around the image */
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div id="mainHeader">
+            <h1>Daily Snaps</h1>
+        </div>
+
+        <div id="dailyContent">
+            <h2>Your Daily Fact</h2>
+            <p id="dailyFact">Did you know? Bananas are berries, but strawberries aren't!</p>
+            <img src="dailysnap.png" alt="Daily Snap" id="dailySnapImage"> <!-- Image added here -->
+            <button id="takeQuizButton">Take Quick Quiz</button>
+            <button id="backToHomeButton">Back to Home</button>
+        </div>
+
+        <div id="quizContainer" class="hidden">
+            <h3>Quiz Question</h3>
+            <p>Are bananas considered berries?</p>
+            <button class="quizAnswer" data-answer="yes">Yes</button>
+            <button class="quizAnswer" data-answer="no">No</button>
+            <p id="quizFeedback"></p>
+            <button class="backToDailyButton">Back to Daily Fact</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const dailyContent = document.getElementById("dailyContent");
+            const quizContainer = document.getElementById("quizContainer");
+
+            // Handle taking the quiz
+            document.getElementById('takeQuizButton').addEventListener('click', function() {
+                dailyContent.classList.add("hidden");
+                quizContainer.classList.remove("hidden");
+            });
+
+            // Handle quiz answer submission
+            document.querySelectorAll('.quizAnswer').forEach(button => {
+                button.addEventListener('click', function() {
+                    const answer = this.getAttribute('data-answer');
+                    const feedback = document.getElementById('quizFeedback');
+
+                    if (answer === "yes") {
+                        feedback.innerText = "Correct!";
+                    } else {
+                        feedback.innerText = "Wrong! The correct answer is: Yes.";
+                    }
+                });
+            });
+
+            // Back to Home Button
+            document.getElementById('backToHomeButton').addEventListener('click', function() {
+                window.location.href = 'index.html';
+            });
+
+            // Back to Daily Fact Button
+            document.querySelector('.backToDailyButton').addEventListener('click', function() {
+                quizContainer.classList.add("hidden");
+                dailyContent.classList.remove("hidden");
+            });
+        });
+    </script>
+</body>
+</html>
